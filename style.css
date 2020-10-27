@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "head head head"
+    "left main main"
+    "left main main";
+}
+.head{
+    background: lightblue;
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    background: lightgreen;
+    grid-area: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main{
+    background: orange;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    margin: 10px;
+    border: solid 5px black;
+}
+p{
+    text-align: center;
+}
+.myrow{
+    background: crimson;
+    color: white;
+}
+.myrow:nth-child(odd){
+    background: wheat;
+    color: black;
+}
