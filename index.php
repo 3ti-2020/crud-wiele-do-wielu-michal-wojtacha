@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="head"><h1>Michał Wojtacha</h1></div>
+    <div class="head"><title>Michał Wojtacha grupa 1</title></div>
     <div class="left">
     <form action="insert.php" method="post">
     <p>Imie</p>
