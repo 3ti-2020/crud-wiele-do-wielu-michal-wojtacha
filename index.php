@@ -17,12 +17,8 @@
     <input type="submit" value="DODAJ"> <br>
     </form>
     <?php
-    $servername = "127.0.0.1";
-    $username = "root";
-    $password = "";
-    $dbname = "lib";
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli("sql7.freemysqlhosting.net", "sql7373162", "5YpM88aCen", "sql7373162");
 
     $result_autor = $conn->query("SELECT * FROM lib_autor");
     $result_tytuly = $conn->query("SELECT * FROM lib_tytul");
@@ -46,8 +42,8 @@
     </div>
     <div class="main">
     <?php
-    $conn = new mysqli("127.0.0.1", "root", "","lib");
-    $result = $conn -> query("select `lib`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`lib`.`lib_autor`.`imie` AS `imie`,`lib`.`lib_tytul`.`tytul` AS `tytul` from `lib`.`lib_tytul` join `lib`.`lib_autor_tytul` join `lib`.`lib_autor` where `lib`.`lib_autor_tytul`.`id_autor` = `lib`.`lib_autor`.`id_autor` and `lib`.`lib_autor_tytul`.`id_tytul` = `lib`.`lib_tytul`.`id_tytul`");
+    $conn = new mysqli("sql7.freemysqlhosting.net", "sql7373162", "5YpM88aCen", "sql7373162");
+    $result = $conn -> query("select `sql7373162`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`sql7373162`.`lib_autor`.`imie` AS `imie`,`sql7373162`.`lib_tytul`.`tytul` AS `tytul` from `sql7373162`.`lib_tytul` join `sql7373162`.`lib_autor_tytul` join `sql7373162`.`lib_autor` where `sql7373162`.`lib_autor_tytul`.`id_autor` = `sql7373162`.`lib_autor`.`id_autor` and `sql7373162`.`lib_autor_tytul`.`id_tytul` = `sql7373162`.`lib_tytul`.`id_tytul`");
     echo("<table border='1'>");
     while($row = $result -> fetch_assoc()){
         echo("<tr class='myrow'>");
