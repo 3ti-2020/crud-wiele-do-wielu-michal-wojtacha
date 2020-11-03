@@ -39,10 +39,16 @@ p{
 }
 a{
     background: chocolate;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 121px;
     list-style-type: none;
     text-decoration: none;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    border-radius: 60%;
 
 }
 .myrow{
