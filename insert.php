@@ -4,7 +4,7 @@ $conn = new mysqli("sql7.freemysqlhosting.net", "sql7373162", "5YpM88aCen", "sql
 $autor = $_POST['imie'];
 $tytul = $_POST['tytul'];
 
-$sql_autor = "INSERT INTO `lib_autor`(`id_autor`, `autor`) VALUES (NULL,'$autor')";
+$sql_autor = "INSERT INTO `lib_autor`(`id_autor`, `imie`) VALUES (NULL,'$autor')";
 
 $query1 = mysqli_query($conn, $sql_autor);
 
