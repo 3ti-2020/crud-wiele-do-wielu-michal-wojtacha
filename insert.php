@@ -17,7 +17,7 @@ if($query1){
 }
 
 if($query2){
-    $id_autor = "SELECT id_autor FROM `lib_autor` WHERE autor='$autor'";
+    $id_autor = "SELECT id_autor FROM `lib_autor` WHERE imie='$autor'";
 $result1 = $conn->query($id_autor);
 while($row1 = $result1->fetch_assoc()){
     $autorid = $row1['id_autor'];
