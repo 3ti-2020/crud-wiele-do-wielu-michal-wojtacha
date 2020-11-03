@@ -13,6 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .left{
     background: lightgreen;
@@ -35,6 +36,14 @@ form{
 }
 p{
     text-align: center;
+}
+a{
+    background: chocolate;
+    height: 100px;
+    width: 100px;
+    list-style-type: none;
+    text-decoration: none;
+
 }
 .myrow{
     background: crimson;
