@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="head"><h1>Michał Wojtacha grupa 1</h1></div>
+    <div class="head"><h1>Michał Wojtacha grupa 1</h1>
+    <a href="card/index.html">KARTY</a>
+    </div>
     <div class="left">
     <form action="insert.php" method="post">
     <p>Imie</p>
