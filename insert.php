@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("sql7.freemysqlhosting.net", "sql7373162", "5YpM88aCen", "sql7373162");
+$conn = new mysqli("remotemysql.com", "iLlI4Mu3Ym", "cjbNgHQp2x", "iLlI4Mu3Ym");
 
 $autor = $_POST['imie'];
 $tytul = $_POST['tytul'];
