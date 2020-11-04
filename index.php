@@ -12,7 +12,10 @@
     <a href="card/index.html" class="karty"><i class="fas fa-address-card"></i>KARTY</a>
     <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-michal-wojtacha" class="gthb"><i class="fab fa-github"></i>GITHUB</a>
     </div>
-    <div class="left">
+    <div id="left" class="left">
+    <div><button id="bgbtn">FIOLETOWY</button>
+    <button id="bgbtn1">RÓŻOWY</button>
+    </div>
     <form action="insert.php" method="post">
     <p>Imie</p>
     <input type="text" name="imie">
@@ -38,5 +41,6 @@
     echo("</table>");
     ?>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
