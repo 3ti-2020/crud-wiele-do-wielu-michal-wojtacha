@@ -23,7 +23,7 @@
     <div class="main">
     <?php
     $conn = new mysqli("remotemysql.com", "iLlI4Mu3Ym", "cjbNgHQp2x", "iLlI4Mu3Ym");
-    $result = $conn -> query("select `sql7373162`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`sql7373162`.`lib_autor`.`imie` AS `imie`,`sql7373162`.`lib_tytul`.`tytul` AS `tytul` from `sql7373162`.`lib_tytul` join `sql7373162`.`lib_autor_tytul` join `sql7373162`.`lib_autor` where `sql7373162`.`lib_autor_tytul`.`id_autor` = `sql7373162`.`lib_autor`.`id_autor` and `sql7373162`.`lib_autor_tytul`.`id_tytul` = `sql7373162`.`lib_tytul`.`id_tytul`");
+    $result = $conn -> query("select `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`iLlI4Mu3Ym`.`lib_autor`.`imie` AS `imie`,`iLlI4Mu3Ym`.`lib_tytul`.`tytul` AS `tytul` from `iLlI4Mu3Ym`.`lib_tytul` join `iLlI4Mu3Ym`.`lib_autor_tytul` join `iLlI4Mu3Ym`.`lib_autor` where `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor` = `iLlI4Mu3Ym`.`lib_autor`.`id_autor` and `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_tytul` = `iLlI4Mu3Ym`.`lib_tytul`.`id_tytul`");
     echo("<table border='1'>");
     while($row = $result -> fetch_assoc()){
         echo("<tr class='myrow'>");
