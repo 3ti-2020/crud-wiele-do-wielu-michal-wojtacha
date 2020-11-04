@@ -8,9 +8,18 @@
     <script src="https://kit.fontawesome.com/4fb762f9bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="headik">
+    <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-michal-wojtacha" class="gthb"><i class="fab fa-github"></i>GITHUB</a>
+    <form action="" method="post">
+        <p>Nazwa użytkownika</p>
+        <input type="text" name="user">
+        <p>Hasło</p>
+        <input type="text" name="haslo"><br>
+        <input type="submit" value="ZALOGUJ">
+    </form>
+    </div>
     <div class="head"><h1>Michał Wojtacha grupa 1</h1>
     <a href="card/index.html" class="karty"><i class="fas fa-address-card"></i>KARTY</a>
-    <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-michal-wojtacha" class="gthb"><i class="fab fa-github"></i>GITHUB</a>
     </div>
     <div id="left" class="left">
     <div><button id="bgbtn">FIOLETOWY</button>

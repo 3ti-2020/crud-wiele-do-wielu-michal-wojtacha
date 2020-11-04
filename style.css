@@ -1,11 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "head head head"
+    grid-template-areas: "headik head head"
     "left main main"
     "left main main";
+}
+.headik{
+    background: lightblue;
+    grid-area: headik;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .head{
     background: lightblue;
@@ -49,6 +61,9 @@ body{
 form{
     margin: 10px;
     border: solid 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 p{
     text-align: center;
