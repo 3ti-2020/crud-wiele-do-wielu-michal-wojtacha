@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="head"><h1>Michał Wojtacha grupa 1</h1>
-    <a href="card/index.html">KARTY</a>
-    <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-michal-wojtacha">GITHUB</a>
+    <a href="card/index.html" class="karty">KARTY</a>
+    <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-michal-wojtacha" class="gthb">GITHUB</a>
     </div>
     <div class="left">
     <form action="insert.php" method="post">

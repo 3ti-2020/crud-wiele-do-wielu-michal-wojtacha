@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body{
     height: 100vh;
     display: grid;
@@ -37,7 +41,7 @@ form{
 p{
     text-align: center;
 }
-a{
+.karty{
     background: chocolate;
     height: 60px;
     width: 121px;
@@ -49,6 +53,22 @@ a{
     align-items: center;
     color: wheat;
     border-radius: 60%;
+    margin: 5px;
+
+}
+.gthb{
+    background: darkblue;
+    height: 60px;
+    width: 121px;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 60%;
+    margin: 5px;
 
 }
 .myrow{
@@ -59,7 +79,11 @@ a{
     background: wheat;
     color: black;
 }
-a:hover{
+.karty:hover{
     background: wheat;
     color: chocolate;
+}
+.gthb:hover{
+    background: white;
+    color: darkblue;
 }
