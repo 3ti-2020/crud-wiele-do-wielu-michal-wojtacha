@@ -59,3 +59,7 @@ a{
     background: wheat;
     color: black;
 }
+a:hover{
+    background: wheat;
+    color: chocolate;
+}
