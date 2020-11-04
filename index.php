@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4fb762f9bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="head"><h1>Michał Wojtacha grupa 1</h1>
-    <a href="card/index.html" class="karty">KARTY</a>
-    <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-michal-wojtacha" class="gthb">GITHUB</a>
+    <a href="card/index.html" class="karty"><i class="fas fa-address-card"></i>KARTY</a>
+    <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-michal-wojtacha" class="gthb"><i class="fab fa-github"></i>GITHUB</a>
     </div>
     <div class="left">
     <form action="insert.php" method="post">
