@@ -25,13 +25,9 @@
     <div><button id="bgbtn">FIOLETOWY</button>
     <button id="bgbtn1">RÓŻOWY</button>
     </div>
-    <form action="insert.php" method="post">
-    <p>Imie</p>
-    <input type="text" name="imie">
-    <p>Tytul</p>
-    <input type="text" name="tytul"> <br>
-    <input type="submit" value="DODAJ"> <br>
-    </form>
+    <p>Dodawanie i usuwanie z bazy ukryte za logowaniem.</p>
+    <p>Login: a</p>
+    <p>Hasło: a</p>
     </div>
     <div class="main">
     <?php
@@ -40,11 +36,7 @@
     echo("<table border='1'>");
     while($row = $result -> fetch_assoc()){
         echo("<tr class='myrow'>");
-        echo("<td>".$row['id_autor_tytul']."</td>"."<td>".$row['imie']."</td>"."<td>".$row['tytul']."</td>"."<td>
-        <form action='delete.php' method='POST'>
-        <input type='hidden' name='id' value=".$row['id_autor_tytul'].">
-        <input type='submit' value='delete'>
-        </form> </td>");
+        echo("<td>".$row['id_autor_tytul']."</td>"."<td>".$row['imie']."</td>"."<td>".$row['tytul']."</td>");
         echo("</tr>");
     }
     echo("</table>");
