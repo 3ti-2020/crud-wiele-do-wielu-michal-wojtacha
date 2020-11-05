@@ -10,9 +10,9 @@
 <body>
     <div class="headik">
     <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-michal-wojtacha" class="gthb"><i class="fab fa-github"></i>GITHUB</a>
-    <form action="" method="post">
+    <form action="log/login.php" method="post">
         <p>Nazwa użytkownika</p>
-        <input type="text" name="user">
+        <input type="text" name="login">
         <p>Hasło</p>
         <input type="text" name="haslo"><br>
         <input type="submit" value="ZALOGUJ">
