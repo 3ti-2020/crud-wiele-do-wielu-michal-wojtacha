@@ -40,6 +40,11 @@
         <input type='hidden' name='id' value=".$row['id_autor_tytul'].">
         <input type='submit' value='delete'>
         </form> </td>");
+        echo("<td>
+        <form action='wypozycz.php' method='POST'>
+        <input type='hidden' name='id' value=".$row['id_autor_tytul'].">
+        <input type='submit' value='wypozycz'>
+        </form> </td>");
         echo("</tr>");
     }
     echo("</table>");
