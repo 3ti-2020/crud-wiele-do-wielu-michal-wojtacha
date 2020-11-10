@@ -32,7 +32,12 @@
     <?php
     $conn = new mysqli("remotemysql.com", "iLlI4Mu3Ym", "cjbNgHQp2x", "iLlI4Mu3Ym");
     $result = $conn -> query("select `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`iLlI4Mu3Ym`.`lib_autor`.`imie` AS `imie`,`iLlI4Mu3Ym`.`lib_tytul`.`tytul` AS `tytul` from `iLlI4Mu3Ym`.`lib_tytul` join `iLlI4Mu3Ym`.`lib_autor_tytul` join `iLlI4Mu3Ym`.`lib_autor` where `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor` = `iLlI4Mu3Ym`.`lib_autor`.`id_autor` and `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_tytul` = `iLlI4Mu3Ym`.`lib_tytul`.`id_tytul`");
-    echo("<table border='1'>");
+    echo("<table class='tabelka' border='1'>");
+    echo("<th>Id</th>");
+    echo("<th>Autor</th>");
+    echo("<th>Tytuł</th>");
+    echo("<th>Delete</th>");
+    echo("<th>Wypożycz</th>");
     while($row = $result -> fetch_assoc()){
         echo("<tr class='myrow'>");
         echo("<td>".$row['id_autor_tytul']."</td>"."<td>".$row['imie']."</td>"."<td>".$row['tytul']."</td>"."<td>

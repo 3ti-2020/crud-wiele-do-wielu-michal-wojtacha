@@ -99,9 +99,15 @@ p{
     margin: 5px;
 
 }
+th{
+    background: orchid;
+    color: white;
+    font-size: 30px;
+}
 .myrow{
     background: crimson;
     color: white;
+    font-size: 30px;
 }
 .myrow:nth-child(odd){
     background: wheat;
