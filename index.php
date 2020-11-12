@@ -22,12 +22,13 @@
     <a href="card/index.html" class="karty"><i class="fas fa-address-card"></i>KARTY</a>
     </div>
     <div id="left" class="left">
-    <div><button id="bgbtn">FIOLETOWY</button>
-    <button id="bgbtn1">RÓŻOWY</button>
-    </div>
     <p>Dodawanie i usuwanie z bazy ukryte za logowaniem.</p>
     <p>Login: a</p>
     <p>Hasło: a</p>
+    <div class="przerwa"></div>
+    <div><button id="bgbtn">Jaśniej</button>
+    <button id="bgbtn1">Ciemniej</button>
+    </div>
     </div>
     <div class="main">
     <?php

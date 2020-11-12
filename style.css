@@ -29,7 +29,7 @@ body{
     flex-direction: column;
 }
 .left{
-    background: lightgreen;
+    background: rgb(117, 59, 18);
     grid-area: left;
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@ body{
     flex-direction: column;
 }
 .left1{
-    background: rebeccapurple;
+    background: rgb(179, 90, 27);
     grid-area: left;
     display: flex;
     justify-content: center;
@@ -45,7 +45,8 @@ body{
     flex-direction: column;
 }
 .left2{
-    background: pink;
+    background: rgb(48, 24, 7);
+    color: white;
     grid-area: left;
     display: flex;
     justify-content: center;
@@ -100,13 +101,16 @@ p{
     margin: 5px;
 
 }
+.przerwa{
+    height: 30px;
+}
 th{
-    background: orchid;
-    color: white;
+    background: lightblue;
+    color: black;
     font-size: 20px;
 }
 .myrow{
-    background: crimson;
+    background: rgb(117, 59, 18);
     color: white;
     font-size: 20px;
 }

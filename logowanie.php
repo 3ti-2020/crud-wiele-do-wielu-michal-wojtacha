@@ -20,11 +20,20 @@
     <a href="log/logout.php" class="karty">Wyloguj</a>
     </div>
     <div class="left">
+    <h2>Dodaj książkę</h2>
     <form action="insert.php" method="post">
     <p>Imie</p>
     <input type="text" name="imie">
-    <p>Tytul</p>
+    <p>Tytuł</p>
     <input type="text" name="tytul"> <br>
+    <input type="submit" value="DODAJ"> <br>
+    </form>
+    <h2>Dodaj użytkownika</h2>
+    <form action="insertuzy.php" method="post">
+    <p>login</p>
+    <input type="text" name="login">
+    <p>hasło</p>
+    <input type="text" name="haslo"> <br>
     <input type="submit" value="DODAJ"> <br>
     </form>
     </div>
