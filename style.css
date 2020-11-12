@@ -58,6 +58,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-content: space-around;
 }
 form{
     margin: 10px;
@@ -102,12 +103,12 @@ p{
 th{
     background: orchid;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
 }
 .myrow{
     background: crimson;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
 }
 .myrow:nth-child(odd){
     background: wheat;
