@@ -3,5 +3,5 @@
  $id = $_POST['idoddaj'];
  $sql = "DELETE FROM `lib_wypoz` WHERE `lib_wypoz`.`id_wypoz` = '$id'";
  mysqli_query($conn, $sql);
- //header('Location: https://crud-michal-wojtacha.herokuapp.com/logowanie.php');
+ header('Location: https://crud-michal-wojtacha.herokuapp.com/logowanie.php');
 ?>
