@@ -54,6 +54,29 @@
     }
     echo("</table>");
     ?>
+    <?php
+    $conn = new mysqli("remotemysql.com", "iLlI4Mu3Ym", "cjbNgHQp2x", "iLlI4Mu3Ym");
+    $result = $conn -> query("SELECT id_wypoz, lib_tytul.tytul, lib_uzytk.login, lib_uzytk.haslo, data_wypoz FROM lib_wypoz,lib_uzytk,lib_tytul WHERE lib_wypoz.id_tytul = lib_tytul.id_tytul AND lib_wypoz.id_uzytk=lib_uzytk.id_uzytk
+    ");
+    echo("<table class='tabelka' border='1'>");
+    echo("<th>Id</th>");
+    echo("<th>Tytuł</th>");
+    echo("<th>Login</th>");
+    echo("<th>Hasło</th>");
+    echo("<th>Data</th>");
+    echo("<th>Oddaj</th>");
+    while($row = $result -> fetch_assoc()){
+        echo("<tr class='myrow'>");
+        echo("<td>".$row['id_wypoz']."</td>"."<td>".$row['tytul']."</td>"."<td>".$row['login']."</td>"."<td>".$row['haslo']."</td>"."<td>".$row['data_wypoz']."</td>");
+        echo("<td>
+        <form action='wypozycz.php' method='POST'>
+        <input type='hidden' name='id' value=".$row['id_wypoz'].">
+        <input type='submit' value='Oddaj'>
+        </form> </td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+    ?>
     </main>
 </body>
 </html>
