@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/4fb762f9bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="headik">
+    <div id="headik" class="headik">
     <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-michal-wojtacha" class="gthb"><i class="fab fa-github"></i>GITHUB</a>
     <form action="log/login.php" method="post">
         <p>Nazwa użytkownika</p>
@@ -18,7 +18,7 @@
         <input type="submit" value="ZALOGUJ">
     </form>
     </div>
-    <div class="head"><h1>Michał Wojtacha grupa 1</h1>
+    <div id="head" class="head"><h1>Michał Wojtacha grupa 1</h1>
     <a href="card/index.html" class="karty"><i class="fas fa-address-card"></i>KARTY</a>
     </div>
     <div id="left" class="left">
@@ -30,7 +30,7 @@
     <button id="bgbtn1">Ciemniej</button>
     </div>
     </div>
-    <div class="main">
+    <div id="main" class="main">
     <?php
     $conn = new mysqli("remotemysql.com", "iLlI4Mu3Ym", "cjbNgHQp2x", "iLlI4Mu3Ym");
     $result = $conn -> query("select `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`iLlI4Mu3Ym`.`lib_autor`.`imie` AS `imie`,`iLlI4Mu3Ym`.`lib_tytul`.`tytul` AS `tytul` from `iLlI4Mu3Ym`.`lib_tytul` join `iLlI4Mu3Ym`.`lib_autor_tytul` join `iLlI4Mu3Ym`.`lib_autor` where `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor` = `iLlI4Mu3Ym`.`lib_autor`.`id_autor` and `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_tytul` = `iLlI4Mu3Ym`.`lib_tytul`.`id_tytul`");

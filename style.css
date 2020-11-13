@@ -20,8 +20,40 @@ body{
     align-items: center;
     flex-direction: column;
 }
+.headik1{
+    background: rgb(217, 240, 248);
+    grid-area: headik;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.headik2{
+    background: rgb(109, 142, 153);
+    grid-area: headik;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .head{
     background: lightblue;
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.head1{
+    background: rgb(217, 240, 248);
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.head2{
+    background: rgb(109, 142, 153);
     grid-area: head;
     display: flex;
     justify-content: center;
@@ -55,6 +87,22 @@ body{
 }
 .main{
     background: orange;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.main1{
+    background: rgb(255, 197, 89);
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.main2{
+    background: rgb(192, 125, 0);
     grid-area: main;
     display: flex;
     justify-content: center;
