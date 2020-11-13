@@ -14,9 +14,9 @@
     <title>Sekretna strona</title>
 </head>
 <body>
-    <div class="headik"></div>
+    <div class="headik">
+    </div>
     <div class="head">
-    <a href="index.php" class="karty">Powrót</a>
     <a href="log/logout.php" class="karty">Wyloguj</a>
     </div>
     <div class="left">
@@ -36,6 +36,27 @@
     <input type="text" name="haslo"> <br>
     <input type="submit" value="DODAJ"> <br>
     </form>
+    <?php
+    $conn = new mysqli("remotemysql.com", "iLlI4Mu3Ym", "cjbNgHQp2x", "iLlI4Mu3Ym");
+    $result1 = $conn->query("SELECT * FROM lib_uzytk");
+    $result2 = $conn->query("SELECT * FROM lib_tytul");
+
+    echo("<h2>Wypożyczenie:</h2>");
+    echo("<form action='wypozyczuzy.php' method='POST'>");
+    echo("<select name='login'>");
+    while( $row = $result1 -> fetch_assoc()){
+        echo("<option value='".$row['id_uzytk']."'>".$row['login']."</option>");
+    }
+    echo("</select>");
+
+    echo("<select name='tytul'>");
+    while($row=$result2->fetch_assoc() ){
+        echo("<option value='".$row['id_tytul']."'>".$row['tytul']."</option>");
+    }
+    echo("</select>");
+    echo("<input type='submit' value='Dodaj'>");
+    echo("</form>");
+    ?>
     </div>
     <main class="main">
     <?php

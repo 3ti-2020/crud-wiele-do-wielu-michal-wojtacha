@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Czas generowania: 05 Lis 2020, 11:23
--- Wersja serwera: 8.0.13-4
--- Wersja PHP: 7.2.24-0ubuntu0.18.04.7
+-- Host: 127.0.0.1
+-- Czas generowania: 27 Paź 2020, 13:50
+-- Wersja serwera: 10.4.11-MariaDB
+-- Wersja PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `iLlI4Mu3Ym`
+-- Baza danych: `lib`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `lib_autor` (
   `id_autor` int(11) NOT NULL,
   `imie` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `lib_autor`
@@ -40,11 +39,8 @@ CREATE TABLE `lib_autor` (
 INSERT INTO `lib_autor` (`id_autor`, `imie`) VALUES
 (1, 'Tolkien'),
 (2, 'Mickiewicz'),
-(4, 'Marcin'),
-(5, 'Andrzej'),
-(6, 'Dariusz'),
-(7, 'Miczi'),
-(8, '');
+(3, 'Marcin'),
+(4, 'Michał');
 
 -- --------------------------------------------------------
 
@@ -56,7 +52,7 @@ CREATE TABLE `lib_autor_tytul` (
   `id_autor_tytul` int(11) NOT NULL,
   `id_autor` int(11) NOT NULL,
   `id_tytul` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `lib_autor_tytul`
@@ -64,11 +60,7 @@ CREATE TABLE `lib_autor_tytul` (
 
 INSERT INTO `lib_autor_tytul` (`id_autor_tytul`, `id_autor`, `id_tytul`) VALUES
 (1, 1, 1),
-(2, 2, 2),
-(3, 3, 3),
-(4, 4, 4),
-(5, 5, 5),
-(8, 0, 8);
+(2, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -79,7 +71,7 @@ INSERT INTO `lib_autor_tytul` (`id_autor_tytul`, `id_autor`, `id_tytul`) VALUES
 CREATE TABLE `lib_tytul` (
   `id_tytul` int(11) NOT NULL,
   `tytul` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `lib_tytul`
@@ -88,13 +80,28 @@ CREATE TABLE `lib_tytul` (
 INSERT INTO `lib_tytul` (`id_tytul`, `tytul`) VALUES
 (1, 'Hobbit'),
 (2, 'Pan Tadeusz'),
-(3, 'Hobbit'),
-(4, 'Jakon'),
-(5, 'Ostatnie zyczenie'),
-(6, '3ti'),
-(7, 'F1'),
-(8, '78'),
-(9, '78');
+(3, 'Jakon');
+
+-- --------------------------------------------------------
+
+--
+-- Zastąpiona struktura widoku `widok`
+-- (Zobacz poniżej rzeczywisty widok)
+--
+CREATE TABLE `widok` (
+`id_autor_tytul` int(11)
+,`imie` varchar(32)
+,`tytul` varchar(32)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura widoku `widok`
+--
+DROP TABLE IF EXISTS `widok`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `widok`  AS  select `lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`lib_autor`.`imie` AS `imie`,`lib_tytul`.`tytul` AS `tytul` from ((`lib_tytul` join `lib_autor_tytul`) join `lib_autor`) where `lib_autor_tytul`.`id_autor` = `lib_autor`.`id_autor` and `lib_autor_tytul`.`id_tytul` = `lib_tytul`.`id_tytul` ;
 
 --
 -- Indeksy dla zrzutów tabel
@@ -110,7 +117,9 @@ ALTER TABLE `lib_autor`
 -- Indeksy dla tabeli `lib_autor_tytul`
 --
 ALTER TABLE `lib_autor_tytul`
-  ADD PRIMARY KEY (`id_autor_tytul`);
+  ADD PRIMARY KEY (`id_autor_tytul`),
+  ADD KEY `id_autor` (`id_autor`),
+  ADD KEY `id_tytul` (`id_tytul`);
 
 --
 -- Indeksy dla tabeli `lib_tytul`
@@ -126,19 +135,19 @@ ALTER TABLE `lib_tytul`
 -- AUTO_INCREMENT dla tabeli `lib_autor`
 --
 ALTER TABLE `lib_autor`
-  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `lib_autor_tytul`
 --
 ALTER TABLE `lib_autor_tytul`
-  MODIFY `id_autor_tytul` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_autor_tytul` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `lib_tytul`
 --
 ALTER TABLE `lib_tytul`
-  MODIFY `id_tytul` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_tytul` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
