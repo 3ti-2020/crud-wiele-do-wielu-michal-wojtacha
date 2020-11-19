@@ -37,3 +37,16 @@ const zmiana1={
     },
 }
 zmiana1.init();
+
+const zmiana1={
+    data: document.getElementById("data"),
+
+    btn1:function(){
+        this.data.className = "data";
+    },
+
+    // init:function(){
+    //     this.btn.addEventListener('click',this.btn1.bind(zmiana1));
+    // },
+}
+zmiana1.init();
