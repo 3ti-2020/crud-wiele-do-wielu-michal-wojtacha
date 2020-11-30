@@ -20,6 +20,7 @@
     </div>
     <div id="head" class="head"><h1>Michał Wojtacha grupa 1</h1>
     <a href="card/index.html" class="karty"><i class="fas fa-address-card"></i>KARTY</a>
+    <a href="todo/index.php" class="karty"><i class="fas fa-list"></i>TODO List</a>
     </div>
     <div id="left" class="left">
     <p>Dodawanie i usuwanie z bazy ukryte za logowaniem.</p>
