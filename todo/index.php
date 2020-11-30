@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/4fb762f9bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -31,21 +31,38 @@
     </div>
     </div>
     <div id="main" class="main">
-    <?php
-    $conn = new mysqli("remotemysql.com", "iLlI4Mu3Ym", "cjbNgHQp2x", "iLlI4Mu3Ym");
-    $result = $conn -> query("select `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`iLlI4Mu3Ym`.`lib_autor`.`imie` AS `imie`,`iLlI4Mu3Ym`.`lib_tytul`.`tytul` AS `tytul` from `iLlI4Mu3Ym`.`lib_tytul` join `iLlI4Mu3Ym`.`lib_autor_tytul` join `iLlI4Mu3Ym`.`lib_autor` where `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor` = `iLlI4Mu3Ym`.`lib_autor`.`id_autor` and `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_tytul` = `iLlI4Mu3Ym`.`lib_tytul`.`id_tytul`");
-    echo("<table border='1'>");
-    echo("<th>Id</th>");
-    echo("<th>Autor</th>");
-    echo("<th>Tytuł</th>");
-    while($row = $result -> fetch_assoc()){
-        echo("<tr class='myrow'>");
-        echo("<td>".$row['id_autor_tytul']."</td>"."<td>".$row['imie']."</td>"."<td>".$row['tytul']."</td>");
-        echo("</tr>");
-    }
-    echo("</table>");
-    ?>
+    <div class="todo">
+            <div style="width: 200px; height: 300px;">
+        <div class="cnt">
+            <form class="form" id="todoForm">
+                <div class="form-row">
+                    <label class="form-label" for="todoMessage">Lista TO DO</label>
+                    <textarea class="form-message" name="todoMessage" id="todoMessage"></textarea>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="button form-button">Dodaj</button>
+                </div>
+            </form>
+            
+            <section class="list-cnt">
+                
+                <div class="list" id="todoList">
+                </div>
+            </section>
+        </div>
+        
+        <template id="elementTemplate">
+        <div class="element-text"></div>
+            <div class="element-bar">
+                <h3 class="element-date"></h3>
+                <button class="element-delete" title="Usuń zadanie">
+                   Usuń zadanie
+                </button>
+            </div>
+        </template>
+        </div>
     </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
