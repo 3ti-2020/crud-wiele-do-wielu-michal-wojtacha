@@ -174,3 +174,15 @@ th{
     background: white;
     color: darkblue;
 }
+.pytania{
+    display: flex;
+    flex-direction: column;
+}
+.pytanie{
+    border: solid 3px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgb(255, 199, 96);
+}
