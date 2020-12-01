@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michał Wojtacha</title>
+    <title>Egzamin</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/4fb762f9bd.js" crossorigin="anonymous"></script>
 </head>
@@ -33,20 +33,30 @@
     </div>
     </div>
     <div id="main" class="main">
-    <?php
-    $conn = new mysqli("remotemysql.com", "iLlI4Mu3Ym", "cjbNgHQp2x", "iLlI4Mu3Ym");
-    $result = $conn -> query("select `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor_tytul` AS `id_autor_tytul`,`iLlI4Mu3Ym`.`lib_autor`.`imie` AS `imie`,`iLlI4Mu3Ym`.`lib_tytul`.`tytul` AS `tytul` from `iLlI4Mu3Ym`.`lib_tytul` join `iLlI4Mu3Ym`.`lib_autor_tytul` join `iLlI4Mu3Ym`.`lib_autor` where `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_autor` = `iLlI4Mu3Ym`.`lib_autor`.`id_autor` and `iLlI4Mu3Ym`.`lib_autor_tytul`.`id_tytul` = `iLlI4Mu3Ym`.`lib_tytul`.`id_tytul`");
-    echo("<table border='1'>");
-    echo("<th>Id</th>");
-    echo("<th>Autor</th>");
-    echo("<th>Tytuł</th>");
-    while($row = $result -> fetch_assoc()){
-        echo("<tr class='myrow'>");
-        echo("<td>".$row['id_autor_tytul']."</td>"."<td>".$row['imie']."</td>"."<td>".$row['tytul']."</td>");
-        echo("</tr>");
-    }
-    echo("</table>");
-    ?>
+    <div class="pytania">
+        <div class="pytanie">
+            <h3>Który ze sposobów wypisania tekstu nie jest zdefiniowany w języku JavaScript?</h3>
+            <p>A.Funkcja MessageBox()</p><br/>
+            <p>B.Własność innerHTML</p><br/>
+            <p>C.Metoda window.alert()</p><br/>
+            <p>D.Metoda document.write()</p><br/>
+            <details>
+                <summary>SPRAWDŹ ODPOWIEDŹ!</summary>
+                <p><b>D.</b></p>
+            </details>
+        </div>
+        <div class="pytanie">
+            <h3>Edytor spełniający założenia WYSIWYG musi umożliwiać</h3>
+            <p>A.publikację strony na serwerze poprzez wbudowanego klienta FTP</p><br/>
+            <p>B.tworzenie podstawowej grafiki wektorowej</p><br/>
+            <p>C.obróbkę plików dźwiękowych przed umieszczeniem ich na stronie internetowej</p><br/>
+            <p>D.uzyskanie zbliżonego wyniku tworzonej strony do jej obrazu w przeglądarce internetowej</p><br/>
+            <details>
+                <summary>SPRAWDŹ ODPOWIEDŹ!</summary>
+                <p><b>D.</b></p>
+            </details>
+        </div>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>
