@@ -85,6 +85,14 @@ body{
     align-items: center;
     flex-direction: column;
 }
+.main8{
+    background: white;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
 .main{
     background: orange;
     grid-area: main;
