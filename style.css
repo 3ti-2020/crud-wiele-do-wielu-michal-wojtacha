@@ -184,7 +184,8 @@ th{
 }
 .pytania{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .pytanie{
     border: solid 3px black;
@@ -194,4 +195,6 @@ th{
     justify-content: flex-start;
     background: rgb(255, 199, 96);
     font-size: 12px;
+    width: 300px;
+    margin: 10px;
 }
